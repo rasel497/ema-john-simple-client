@@ -5,9 +5,18 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 
+
+/*
+count : loaded done
+perPage : 10
+pages: count / perPage
+page: 
+*/
+
 const Shop = () => {
-    const products = useLoaderData();
+    const { products, count } = useLoaderData();
     const [cart, setCart] = useState([]);
+    const perPage = 10;
 
     const clearCart = () => {
         setCart([]);
